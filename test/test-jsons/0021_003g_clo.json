@@ -1,0 +1,1009 @@
+{
+    "pbl": {
+        "metadata": {
+            "taal": "nederlands"
+        },
+        "data": {
+            "extratekst": "www.clo.nl\/nl002120",
+            "grafiektekst": "CBS\/aug25"
+        }
+    },
+    "chart": {
+        "renderTo": "container",
+        "spacingTop": 30,
+        "height": 600,
+        "marginBottom": 100,
+        "type": "line"
+    },
+    "annotations": [
+        {
+            "labels": [
+                {
+                    "point": {
+                        "xAxis": 0,
+                        "yAxis": 0,
+                        "y": 0
+                    },
+                    "text": "pbl.nl",
+                    "className": "pbl",
+                    "style": {
+                        "fontFamily": "RijksoverheidSans",
+                        "fontSize": "12px"
+                    },
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "padding": 0,
+                    "overflow": "none"
+                }
+            ]
+        }
+    ],
+    "title": {
+        "align": "left",
+        "text": "Afgevoerde warmte en elektriciteitsproductie bij centrales",
+        "margin": 60,
+        "useHTML": true,
+        "style": {
+            "color": "rgb(0,123,199)",
+            "fontWeight": "bold",
+            "fontFamily": "RijksoverheidSans",
+            "fontSize": "20px",
+            "x": 10
+        }
+    },
+    "subtitle": {
+        "align": "left",
+        "text": "",
+        "useHTML": true,
+        "margin": 60,
+        "style": {
+            "color": "black",
+            "fontFamily": "RijksoverheidSans",
+            "fontSize": "18px",
+            "x": 10
+        }
+    },
+    "xAxis": {
+        "type": "linear",
+        "min": 1980,
+        "max": 2025,
+        "offset": 0,
+        "lineColor": "black",
+        "tickColor": "black",
+        "tickLength": 12,
+        "tickInterval": 5,
+        "minorGridLineWidth": 0,
+        "minorTickInterval": 5,
+        "minorTickColor": "black",
+        "minorTickWidth": 1,
+        "minorTickLength": 5,
+        "startOnTick": false,
+        "plotlines": [
+            {
+                "color": "black",
+                "width": 2
+            }
+        ],
+        "labels": {
+            "y": 35,
+            "style": {
+                "color": "black",
+                "fontFamily": "RijksoverheidSans",
+                "fontSize": 15
+            },
+            "useHTML": true,
+            "format": "{value}"
+        },
+        "title": {
+            "text": "",
+            "align": "low",
+            "y": 30,
+            "rotation": 0,
+            "useHTML": true,
+            "style": {
+                "color": "black",
+                "fontFamily": "RijksoverheidSans",
+                "fontSize": 15
+            }
+        }
+    },
+    "yAxis": {
+        "type": "linear",
+        "min": 0,
+        "max": 400,
+        "offset": 0,
+        "lineColor": "black",
+        "lineWidth": 0,
+        "tickInterval": 100,
+        "tickColor": "white",
+        "tickWidth": 0,
+        "tickLength": 0,
+        "minorGridLineWidth": 0,
+        "minorTickInterval": 100,
+        "minorTickColor": "black",
+        "minorTickWidth": 0,
+        "minorTickLength": 5,
+        "minPadding": 0,
+        "maxPadding": 0,
+        "plotLines": [
+            {
+                "color": "black",
+                "width": 1
+            }
+        ],
+        "reversedStacks": true,
+        "labels": {
+            "x": -8,
+            "style": {
+                "color": "black",
+                "fontFamily": "RijksoverheidSans",
+                "fontSize": 15
+            },
+            "useHTML": true,
+            "format": "{value}"
+        },
+        "title": {
+            "text": "PJ",
+            "useHTML": true,
+            "align": "high",
+            "textAlign": "left",
+            "offset": 0,
+            "rotation": 0,
+            "x": 0,
+            "y": -20,
+            "style": {
+                "color": "black",
+                "fontFamily": "RijksoverheidSans",
+                "fontSize": 15
+            }
+        }
+    },
+    "legend": {
+        "enabled": true,
+        "align": "right",
+        "verticalAlign": "top",
+        "layout": "vertical",
+        "useHTML": true,
+        "x": 0,
+        "y": 80,
+        "itemStyle": {
+            "color": "black",
+            "fontSize": 15,
+            "fontFamily": "RijksoverheidSans",
+            "fontWeight": "normal",
+            "textOverflow": "unset"
+        },
+        "itemWidth": 250,
+        "itemMarginBottom": 10,
+        "symbolPadding": 20,
+        "reversed": false,
+        "width": 250,
+        "symbolWidth": 30,
+        "symbolHeight": 12,
+        "squareSymbol": false,
+        "symbolRadius": 0,
+        "legendFooter": {
+            "yOffset": 0,
+            "text": "* Disclaimer: de cijfers voor 2021-2023 zijn schattingen op basis van beschikbare data en trends."
+        },
+        "title": {
+            "style": {
+                "color": "black",
+                "fontSize": 15,
+                "fontFamily": "RijksoverheidSans",
+                "fontWeight": "normal",
+                "whiteSpace": "nowrap   "
+            },
+            "text": "x",
+            "useHTML": true
+        }
+    },
+    "credits": {
+        "text": "Bron: CBS",
+        "useHTML": true,
+        "style": {
+            "color": "black",
+            "fontFamily": "RijksoverheidSans",
+            "fontSize": 15
+        },
+        "position": {
+            "align": "left",
+            "x": 10,
+            "verticalAlign": "bottom"
+        }
+    },
+    "plotOptions": {
+        "series": {
+            "marker": {
+                "states": {
+                    "hover": {
+                        "enabled": true,
+                        "radius": 3
+                    }
+                }
+            },
+            "states": {
+                "hover": {
+                    "enabled": true,
+                    "lineWidth": 4,
+                    "radius": 1
+                }
+            },
+            "stickyTracking": false,
+            "tooltip": {
+                "followPointer": true,
+                "followTouchMove": true,
+                "hideDelay": 100,
+                "headerFormat": ""
+            }
+        },
+        "line": {
+            "connectNulls": true
+        },
+        "area": {
+            "legendSymbol": "rectangle"
+        }
+    },
+    "series": [
+        {
+            "index": 6,
+            "name": "",
+            "legendIndex": 6,
+            "zIndex": 6,
+            "dashStyle": "Dash",
+            "lineWidth": 3,
+            "showInLegend": false,
+            "type": "line",
+            "color": "rgb(0, 156, 223)",
+            "data": [
+                [
+                    1981,
+                    199
+                ],
+                [
+                    1986,
+                    211
+                ],
+                [
+                    1991,
+                    214
+                ],
+                [
+                    1996,
+                    219
+                ],
+                [
+                    2001,
+                    225
+                ],
+                [
+                    2003,
+                    null
+                ],
+                [
+                    2004,
+                    null
+                ],
+                [
+                    2005,
+                    null
+                ],
+                [
+                    2006,
+                    null
+                ],
+                [
+                    2007,
+                    null
+                ],
+                [
+                    2008,
+                    null
+                ],
+                [
+                    2009,
+                    null
+                ],
+                [
+                    2010,
+                    null
+                ],
+                [
+                    2011,
+                    null
+                ],
+                [
+                    2012,
+                    null
+                ],
+                [
+                    2013,
+                    null
+                ],
+                [
+                    2014,
+                    null
+                ],
+                [
+                    2015,
+                    null
+                ],
+                [
+                    2016,
+                    null
+                ],
+                [
+                    2017,
+                    null
+                ],
+                [
+                    2018,
+                    null
+                ],
+                [
+                    2019,
+                    null
+                ],
+                [
+                    2020,
+                    null
+                ],
+                [
+                    2021,
+                    null
+                ],
+                [
+                    2022,
+                    null
+                ],
+                [
+                    2023,
+                    null
+                ]
+            ],
+            "marker": {
+                "enabled": true,
+                "fillColor": "",
+                "radius": 3,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 4,
+            "name": "",
+            "legendIndex": 4,
+            "zIndex": 4,
+            "dashStyle": "Dash",
+            "lineWidth": 3,
+            "showInLegend": false,
+            "type": "line",
+            "color": "rgb(175, 168, 23)",
+            "data": [
+                [
+                    1981,
+                    330
+                ],
+                [
+                    1986,
+                    339
+                ],
+                [
+                    1991,
+                    334
+                ],
+                [
+                    1996,
+                    313
+                ],
+                [
+                    2001,
+                    311
+                ],
+                [
+                    2003,
+                    null
+                ],
+                [
+                    2004,
+                    null
+                ],
+                [
+                    2005,
+                    null
+                ],
+                [
+                    2006,
+                    null
+                ],
+                [
+                    2007,
+                    null
+                ],
+                [
+                    2008,
+                    null
+                ],
+                [
+                    2009,
+                    null
+                ],
+                [
+                    2010,
+                    null
+                ],
+                [
+                    2011,
+                    null
+                ],
+                [
+                    2012,
+                    null
+                ],
+                [
+                    2013,
+                    null
+                ],
+                [
+                    2014,
+                    null
+                ],
+                [
+                    2015,
+                    null
+                ],
+                [
+                    2016,
+                    null
+                ],
+                [
+                    2017,
+                    null
+                ],
+                [
+                    2018,
+                    null
+                ],
+                [
+                    2019,
+                    null
+                ],
+                [
+                    2020,
+                    null
+                ],
+                [
+                    2021,
+                    null
+                ],
+                [
+                    2022,
+                    null
+                ],
+                [
+                    2023,
+                    null
+                ]
+            ],
+            "marker": {
+                "enabled": true,
+                "fillColor": "",
+                "radius": 3,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 5,
+            "name": "",
+            "legendIndex": 5,
+            "zIndex": 5,
+            "dashStyle": "Dash",
+            "lineWidth": 3,
+            "showInLegend": false,
+            "type": "line",
+            "color": "rgb(180, 0, 123)",
+            "data": [
+                [
+                    1981,
+                    297
+                ],
+                [
+                    1986,
+                    305
+                ],
+                [
+                    1991,
+                    300
+                ],
+                [
+                    1996,
+                    262
+                ],
+                [
+                    2001,
+                    248
+                ],
+                [
+                    2003,
+                    null
+                ],
+                [
+                    2004,
+                    null
+                ],
+                [
+                    2005,
+                    null
+                ],
+                [
+                    2006,
+                    null
+                ],
+                [
+                    2007,
+                    null
+                ],
+                [
+                    2008,
+                    null
+                ],
+                [
+                    2009,
+                    null
+                ],
+                [
+                    2010,
+                    null
+                ],
+                [
+                    2011,
+                    null
+                ],
+                [
+                    2012,
+                    null
+                ],
+                [
+                    2013,
+                    null
+                ],
+                [
+                    2014,
+                    null
+                ],
+                [
+                    2015,
+                    null
+                ],
+                [
+                    2016,
+                    null
+                ],
+                [
+                    2017,
+                    null
+                ],
+                [
+                    2018,
+                    null
+                ],
+                [
+                    2019,
+                    null
+                ],
+                [
+                    2020,
+                    null
+                ],
+                [
+                    2021,
+                    null
+                ],
+                [
+                    2022,
+                    null
+                ],
+                [
+                    2023,
+                    null
+                ]
+            ],
+            "marker": {
+                "enabled": true,
+                "fillColor": "",
+                "radius": 3,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 2,
+            "name": "Elektriciteitsproductie",
+            "seriesFooter": "seriesFooter1",
+            "legendIndex": 2,
+            "zIndex": 2,
+            "dashStyle": "Solid",
+            "lineWidth": 3,
+            "showInLegend": true,
+            "type": "line",
+            "color": "rgb(0, 156, 223)",
+            "data": [
+                [
+                    1981,
+                    null
+                ],
+                [
+                    1986,
+                    null
+                ],
+                [
+                    1991,
+                    null
+                ],
+                [
+                    1996,
+                    null
+                ],
+                [
+                    2001,
+                    225
+                ],
+                [
+                    2003,
+                    240
+                ],
+                [
+                    2004,
+                    254
+                ],
+                [
+                    2005,
+                    249
+                ],
+                [
+                    2006,
+                    242
+                ],
+                [
+                    2007,
+                    253
+                ],
+                [
+                    2008,
+                    244
+                ],
+                [
+                    2009,
+                    260
+                ],
+                [
+                    2010,
+                    273
+                ],
+                [
+                    2011,
+                    254
+                ],
+                [
+                    2012,
+                    231
+                ],
+                [
+                    2013,
+                    227
+                ],
+                [
+                    2014,
+                    243
+                ],
+                [
+                    2015,
+                    260
+                ],
+                [
+                    2016,
+                    275.923
+                ],
+                [
+                    2017,
+                    274.059
+                ],
+                [
+                    2018,
+                    256.065
+                ],
+                [
+                    2019,
+                    269
+                ],
+                [
+                    2020,
+                    250.631
+                ],
+                [
+                    2021,
+                    224.8
+                ],
+                [
+                    2022,
+                    205.197
+                ],
+                [
+                    2023,
+                    166.947
+                ]
+            ],
+            "marker": {
+                "enabled": false,
+                "fillColor": "rgb(255, 255, 255)",
+                "radius": 15,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 1,
+            "name": "Totaal afgevoerde warmte",
+            "seriesTitle": " seriesTitle1",
+            "legendIndex": 1,
+            "zIndex": 1,
+            "dashStyle": "Solid",
+            "lineWidth": 3,
+            "showInLegend": true,
+            "type": "line",
+            "color": "rgb(175, 168, 23)",
+            "data": [
+                [
+                    1981,
+                    null
+                ],
+                [
+                    1986,
+                    null
+                ],
+                [
+                    1991,
+                    null
+                ],
+                [
+                    1996,
+                    null
+                ],
+                [
+                    2001,
+                    311
+                ],
+                [
+                    2003,
+                    333
+                ],
+                [
+                    2004,
+                    347
+                ],
+                [
+                    2005,
+                    343
+                ],
+                [
+                    2006,
+                    322
+                ],
+                [
+                    2007,
+                    333
+                ],
+                [
+                    2008,
+                    326
+                ],
+                [
+                    2009,
+                    334
+                ],
+                [
+                    2010,
+                    346
+                ],
+                [
+                    2011,
+                    309
+                ],
+                [
+                    2012,
+                    300
+                ],
+                [
+                    2013,
+                    287
+                ],
+                [
+                    2014,
+                    312
+                ],
+                [
+                    2015,
+                    331.8
+                ],
+                [
+                    2016,
+                    332.257
+                ],
+                [
+                    2017,
+                    318.447
+                ],
+                [
+                    2018,
+                    283.72
+                ],
+                [
+                    2019,
+                    276
+                ],
+                [
+                    2020,
+                    247.583
+                ],
+                [
+                    2021,
+                    243.104
+                ],
+                [
+                    2022,
+                    229.039
+                ],
+                [
+                    2023,
+                    183.772
+                ]
+            ],
+            "marker": {
+                "enabled": false,
+                "fillColor": "rgb(255, 255, 255)",
+                "radius": 15,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 3,
+            "name": "Via koelwater afgevoerde warmte",
+            "seriesTitle": "seriesTitle2",
+            "legendIndex": 3,
+            "zIndex": 3,
+            "dashStyle": "Solid",
+            "lineWidth": 3,
+            "showInLegend": true,
+            "type": "line",
+            "color": "rgb(180, 0, 123)",
+            "data": [
+                [
+                    1981,
+                    null
+                ],
+                [
+                    1986,
+                    null
+                ],
+                [
+                    1991,
+                    null
+                ],
+                [
+                    1996,
+                    null
+                ],
+                [
+                    2001,
+                    248
+                ],
+                [
+                    2003,
+                    265
+                ],
+                [
+                    2004,
+                    270
+                ],
+                [
+                    2005,
+                    266
+                ],
+                [
+                    2006,
+                    247
+                ],
+                [
+                    2007,
+                    260
+                ],
+                [
+                    2008,
+                    255
+                ],
+                [
+                    2009,
+                    264
+                ],
+                [
+                    2010,
+                    267
+                ],
+                [
+                    2011,
+                    239
+                ],
+                [
+                    2012,
+                    231
+                ],
+                [
+                    2013,
+                    221
+                ],
+                [
+                    2014,
+                    243
+                ],
+                [
+                    2015,
+                    265
+                ],
+                [
+                    2016,
+                    266.6953
+                ],
+                [
+                    2017,
+                    255.2573
+                ],
+                [
+                    2018,
+                    228.658
+                ],
+                [
+                    2019,
+                    227
+                ],
+                [
+                    2020,
+                    203.6157
+                ],
+                [
+                    2021,
+                    200.709
+                ],
+                [
+                    2022,
+                    189.219
+                ],
+                [
+                    2023,
+                    151.632
+                ]
+            ],
+            "marker": {
+                "enabled": false,
+                "fillColor": "rgb(255, 255, 255)",
+                "radius": 15,
+                "symbol": "circle"
+            }
+        },
+        {
+            "index": 7,
+            "name": "Geen jaarlijkse cijfers beschikbaar voor deze serie omdat deze is gebaseerd op een andere bron dan de overige series. De cijfers zijn afkomstig van de website van het CBS en zijn te vinden op www.clo.nl/nl002120.",
+            "seriesTitle": "seriesTitle3",
+            "legendIndex": 7,
+            "zIndex": 7,
+            "dashStyle": "Dash",
+            "lineWidth": 3,
+            "showInLegend": true,
+            "type": "line",
+            "color": "rgb(77, 77, 77)",
+            "data": [],
+            "marker": {
+                "enabled": false,
+                "fillColor": "rgb(255, 255, 0)",
+                "radius": 15,
+                "symbol": "circle"
+            }
+        }
+    ]
+}

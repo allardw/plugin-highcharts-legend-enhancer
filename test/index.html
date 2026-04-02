@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Highcharts Legend Enhancer Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@latest/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@latest/highcharts-more.js"></script>
+    <script src="..\\highcharts-legend-enhancer.js"></script>
+</head>
+<body>
+    <div id="charts-wrapper"></div>
+    <script>
+        const chartFiles = [
+            'test-jsons/0021_003g_clo.json',
+            'test-jsons/chart-config.json',
+        ];
+
+        // parent element waar de containers in komen
+        const parent = document.getElementById('charts-wrapper');
+
+        // Fetch en render alles
+        Promise.all(
+            chartFiles.map((file, index) => 
+                fetch(file)
+                    .then(res => res.json())
+                    .then(config => {
+                        // Maak container aan
+                        const container = document.createElement('div');
+                        container.id = `container-${index}`;
+                        container.style.marginBottom = '30px';
+                        parent.appendChild(container);
+
+                        // Render chart
+                        Highcharts.chart(container.id, config);
+                    })
+            )
+        )
+        .catch(error => {
+            console.error('Error loading charts:', error);
+        });
+    </script>
+</body>
+</html>

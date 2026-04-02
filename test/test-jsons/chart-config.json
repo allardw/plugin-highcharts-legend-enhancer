@@ -1,0 +1,38 @@
+{
+    "chart": {
+        "type": "line"
+    },
+    "title": {
+        "text": "Demo Chart with Series Title in Legend"
+    },
+    "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "legendFooter": {
+            "text": "This is the legend footer",
+            "offsetY": 10
+        }
+    },
+    "series": [
+        {
+            "name": "Schuur",
+            "data": [1, 3, 2, 4],
+            "seriesTitle": "Gebouw Serie"
+        },
+        {
+            "name": "Kiwi",
+            "data": [5, 3, 4, 2],
+            "seriesTitle": "Fruit Serie"
+        },
+        {
+            "name": "Banaan",
+            "data": [2, 2, 3, 5]
+        },
+        {
+            "name": "Sloot",
+            "data": [5, 7, 4, 12],
+            "seriesTitle": "Water Serie"
+        }
+    ]
+}
