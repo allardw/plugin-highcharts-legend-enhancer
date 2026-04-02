@@ -128,6 +128,8 @@
             + (legendFooter.yOffset || 0)
             -35;
 
+        console.log('legendTop', legendTop, 'legendHeight', legend.legendHeight, 'titleHeight', legend.titleHeight, 'baseline', legend.baseline, 'svgBottom', svgBottom)
+
         var fs = legendFooter.style || {};
 
         var maxWidth = legend.legendWidth
@@ -155,6 +157,7 @@
 
     H.addEvent(H.Legend, 'afterGetAllItems', function () {
         this.lastSeriesTitle = null;
+        this.baseline = 0;
         (this.allItems || []).forEach(function (item) {
             delete item._seriesTitleText;
         });
