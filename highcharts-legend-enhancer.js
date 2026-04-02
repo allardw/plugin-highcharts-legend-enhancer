@@ -128,8 +128,6 @@
             + (legendFooter.yOffset || 0)
             -35;
 
-        console.log('legendTop', legendTop, 'legendHeight', legend.legendHeight, 'titleHeight', legend.titleHeight, 'baseline', legend.baseline, 'svgBottom', svgBottom)
-
         var fs = legendFooter.style || {};
 
         var maxWidth = legend.legendWidth
@@ -149,7 +147,7 @@
             'line-height: 1.2em',
         ].join(';');
 
-        el.textContent = legendFooter.text;
+        el.innerHTML = legendFooter.text;
         footerWrapper.appendChild(el);
     });
 

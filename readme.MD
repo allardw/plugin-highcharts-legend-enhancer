@@ -109,3 +109,7 @@ The plugin adds the following classes:
 .highcharts-legend-footer
 ```
 You can use these for additional styling.
+
+## Known issues
+- seriesTitles are not plotted on the right spot when legend.useHTML = false
+- seriesTitles do not wrap if text is long
