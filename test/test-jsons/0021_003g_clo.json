@@ -184,7 +184,7 @@
         "symbolRadius": 0,
         "legendFooter": {
             "yOffset": 0,
-            "text": "* Disclaimer: de cijfers voor 2021-2023 zijn schattingen op basis van beschikbare data en trends."
+            "text": "legend.legendFooter.text: Disclaimer: de cijfers voor 2021-2023 zijn schattingen op basis van beschikbare data en trends."
         },
         "title": {
             "style": {
@@ -194,7 +194,7 @@
                 "fontWeight": "normal",
                 "whiteSpace": "nowrap   "
             },
-            "text": "x",
+            "text": "legend.title.text",
             "useHTML": true
         }
     },
@@ -617,7 +617,6 @@
         {
             "index": 2,
             "name": "Elektriciteitsproductie",
-            "seriesFooter": "seriesFooter1",
             "legendIndex": 2,
             "zIndex": 2,
             "dashStyle": "Solid",
@@ -741,7 +740,7 @@
         {
             "index": 1,
             "name": "Totaal afgevoerde warmte",
-            "seriesTitle": " seriesTitle1",
+            "seriesTitle": "series.serie.seriesTitle<sup>1</sup>",
             "legendIndex": 1,
             "zIndex": 1,
             "dashStyle": "Solid",
@@ -865,7 +864,7 @@
         {
             "index": 3,
             "name": "Via koelwater afgevoerde warmte",
-            "seriesTitle": "seriesTitle2",
+            "seriesTitle": "series.serie.seriesTitle2",
             "legendIndex": 3,
             "zIndex": 3,
             "dashStyle": "Solid",
@@ -989,7 +988,7 @@
         {
             "index": 7,
             "name": "Geen jaarlijkse cijfers beschikbaar voor deze serie omdat deze is gebaseerd op een andere bron dan de overige series. De cijfers zijn afkomstig van de website van het CBS en zijn te vinden op www.clo.nl/nl002120.",
-            "seriesTitle": "seriesTitle3",
+            "seriesTitle": "series.serie.seriesTitle3",
             "legendIndex": 7,
             "zIndex": 7,
             "dashStyle": "Dash",

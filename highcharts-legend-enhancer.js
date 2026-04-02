@@ -106,7 +106,8 @@
                 'white-space: nowrap'
             ].join(';');
 
-            el.textContent = item._seriesTitleText;
+            // el.textContent = item._seriesTitleText;
+            el.innerHTML = item._seriesTitleText;
             titlesWrapper.appendChild(el);
         });
 

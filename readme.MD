@@ -113,3 +113,4 @@ You can use these for additional styling.
 ## Known issues
 - seriesTitles are not plotted on the right spot when legend.useHTML = false
 - seriesTitles do not wrap if text is long
+- placing of seriesTitles is based on top of the textfram, so placing is to low when using superscript

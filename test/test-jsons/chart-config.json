@@ -10,7 +10,7 @@
         "align": "right",
         "verticalAlign": "middle",
         "legendFooter": {
-            "text": "This is the legend footer",
+            "text": "This is the legend footer, it uses a lot of CO<sup>2</sup> to render the chart.",
             "offsetY": 10
         }
     },
