@@ -1,6 +1,10 @@
 (function (H) {
 
+    var VERSION = 'v0.1-alpha';
     var TITLE_OFFSET = 20;
+
+    H.LegendEnhancer = H.LegendEnhancer || {};
+    H.LegendEnhancer.version = VERSION;
 
     // ── Helpers ──────────────────────────────────────────────────────────────
 

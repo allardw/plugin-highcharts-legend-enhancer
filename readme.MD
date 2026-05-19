@@ -37,6 +37,16 @@ Include the plugin after Highcharts is loaded:
 <script src="path/to/highcharts-legend-enhancer.js"></script>
 ```
 
+## Version
+
+The plugin exposes its version at runtime:
+
+```js
+console.log(Highcharts.LegendEnhancer.version);
+```
+
+Use this to verify which plugin build is loaded in a page.
+
 ## Usage
 ### Series with `seriesTitle`
 
