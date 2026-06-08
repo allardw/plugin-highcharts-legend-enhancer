@@ -50,17 +50,26 @@
             seriesTitle = item.options.seriesTitle;
 
         initTracker(legend, 'lastSeriesTitle');
+
+        var isNewTitle = seriesTitle && seriesTitle !== legend.lastSeriesTitle;
         
 
-        if (seriesTitle && seriesTitle !== legend.lastSeriesTitle) {
-            doubleTitleOffset = legend.title && !legend.baseline ? 14 : 0
-            
-            legend.baseline        = (legend.baseline || 0) + TITLE_OFFSET + doubleTitleOffset;
+        if (isNewTitle) {
             legend.lastSeriesTitle = seriesTitle;
             item._seriesTitleText  = seriesTitle;
         }
 
         proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+        console.log('Rendered item: ' + item.name + ', title: ' + seriesTitle + ', isNewTitle: ' + isNewTitle);
+        
+        if (isNewTitle) {
+            console.log('New title: ' + seriesTitle);
+            doubleTitleOffset = legend.title && !legend.baseline ? 14 : 0
+            legend.baseline  = (legend.baseline || 0) + TITLE_OFFSET + doubleTitleOffset;
+            console.log('Baseline bumped to: ' + legend.baseline);
+        }
+
     });
 
     // ── STEP 2: afterRender — write HTML using real rendered positions ─────────
