@@ -45,32 +45,45 @@
 
     // ── STEP 1: renderItem — bump baseline to create space, mark items ────────
 
-    H.wrap(H.Legend.prototype, 'renderItem', function (proceed, item) {
-        var legend      = this,
-            seriesTitle = item.options.seriesTitle;
+H.wrap(H.Legend.prototype, 'renderItem', function (proceed, item) {
+    var legend      = this,
+        options     = legend.options,
+        chart       = legend.chart,
+        seriesTitle = item.options.seriesTitle;
 
-        initTracker(legend, 'lastSeriesTitle');
+    initTracker(legend, 'lastSeriesTitle');
 
-        var isNewTitle = seriesTitle && seriesTitle !== legend.lastSeriesTitle;
+    var isNewTitle = seriesTitle && seriesTitle !== legend.lastSeriesTitle;
+
+    if (isNewTitle) {
+        legend.lastSeriesTitle = seriesTitle;
+        item._seriesTitleText  = seriesTitle;
         
-
-        if (isNewTitle) {
-            legend.lastSeriesTitle = seriesTitle;
-            item._seriesTitleText  = seriesTitle;
-        }
-
-        proceed.apply(this, Array.prototype.slice.call(arguments, 1));
-
-        console.log('Rendered item: ' + item.name + ', title: ' + seriesTitle + ', isNewTitle: ' + isNewTitle);
+        var title_offset = options.itemStyle.fontSize + 10;
+        var doubleTitleOffset = legend.title && !legend.baseline ? title_offset : 0;
         
-        if (isNewTitle) {
-            console.log('New title: ' + seriesTitle);
-            doubleTitleOffset = legend.title && !legend.baseline ? 14 : 0
-            legend.baseline  = (legend.baseline || 0) + TITLE_OFFSET + doubleTitleOffset;
-            console.log('Baseline bumped to: ' + legend.baseline);
-        }
+        legend.baseline = (legend.baseline || 0) + title_offset + doubleTitleOffset;
 
-    });
+        // We just bumped legend.baseline, so Highcharts' one-time init guard
+        // (!legend.baseline) will be skipped inside proceed → symbolHeight
+        // would be NaN/0 → rect/area symbols invisible.
+        // Pre-initialize only on the very first render (symbolHeight not yet set).
+        if (!legend.symbolHeight) {
+            var fontSize = (options.itemStyle && options.itemStyle.fontSize) || '12px';
+            var tmpEl    = chart.renderer.text('Ag', 0, -9999)
+                               .css(options.itemStyle || {})
+                               .add(legend.group);
+            legend.fontMetrics  = chart.renderer.fontMetrics(fontSize, tmpEl);
+            legend.symbolHeight = options.symbolHeight ||
+                                  Math.round(legend.fontMetrics.h * 0.75);
+            tmpEl.destroy();
+        }
+    }
+
+    proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+    console.log('Rendered item: ' + item.name + ', title: ' + seriesTitle + ', isNewTitle: ' + isNewTitle);
+});
 
     // ── STEP 2: afterRender — write HTML using real rendered positions ─────────
 
@@ -91,6 +104,8 @@
 
         var titlesWrapper = getContainerDiv(chart, 'highcharts-html-series-titles');
 
+        var title_offset = options.itemStyle.fontSize + 10;
+
         (legend.allItems || []).forEach(function (item) {
             if (!item._seriesTitleText) return;
 
@@ -98,9 +113,9 @@
             var itemOffset = item.legendItem.label.y || 0;
             var yOffset = item.legendItem.label.yCorr;
 
-            // Position the div at the top of the gap we created with TITLE_OFFSET
+            // Position the div at the top of the gap we created with title_offset
             var titleHeigt = legend.title && legend.title.height || 0
-            var top  = legendTop + itemTop + itemOffset + titleHeigt - TITLE_OFFSET + yOffset;
+            var top  = legendTop + itemTop + itemOffset + titleHeigt - title_offset + yOffset;
             var left = legendLeft + padding;
 
             var el = document.createElement('div');
@@ -111,7 +126,7 @@
                 'position: absolute',
                 'top: '    + top  + 'px',
                 'left: '   + left + 'px',
-                'height: ' + TITLE_OFFSET + 'px',
+                'height: ' + title_offset + 'px',
                 'line-height: 1.2em',
                 'font-size: ' + style.fontSize + 'px',
                 'font-family: ' + style.fontFamily,
